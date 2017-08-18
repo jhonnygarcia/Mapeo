@@ -1,0 +1,61 @@
+﻿@using GestorMapeos.CustomHelpers;
+@using GestorMapeos.Globalization.Views;
+@{
+    ViewBag.Title = PeriodoEstudioIntegracionStrings.LabelTituloPaginaEdicion;
+    ViewBag.TitlePage = PeriodoEstudioIntegracionStrings.LabelTituloPaginaEdicion;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section JavaScript{
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Globalization/Scripts/PeriodoEstudioIntegracionStrings.js")"></script>
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Scripts/pages/PeriodoEstudioIntegracion/Edit.js")"></script>
+}
+
+<div id="page-periodo-estudio-editar">
+    <input type="hidden" id="hd-id-periodo-estudio" value="@ViewBag.Id"/>
+    <input type="hidden" id="hd-id-plan-ofertado" />
+    <div class="box-fieldset">
+        <span class="field-title">@PeriodoEstudioIntegracionStrings.LabelDatosPeriodoEstudioGestor</span>
+        <div class="grid-100 mobile-grid-100">
+            <ul class="box-form">
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PeriodoEstudioIntegracionStrings.LabelIdPeriodoEstudio</label>
+                    <span id="lb-id-periodo-estudio" class="label grid-75 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PeriodoEstudioIntegracionStrings.LabelEstudio</label>
+                    <span id="lb-estudio" class="label grid-75 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PeriodoEstudioIntegracionStrings.LabelPeriodoMatriculacion</label>
+                    <span id="lb-periodo-matriculacion" class="label grid-75 mobile-grid-100"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box-fieldset">
+        <span class="field-title">@PeriodoEstudioIntegracionStrings.LabelDatosPlanOfertadoErp</span>
+        <div class="grid-100 mobile-grid-100">
+            <ul class="box-form">
+                <li>
+                    <button id="btn-search-plan-ofertado" class="button">Buscar Plan Ofertado</button>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PeriodoEstudioIntegracionStrings.LabelIdPlanOfertadoErp</label>
+                    <span id="lb-id-plan-ofertado" class="label grid-75 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PeriodoEstudioIntegracionStrings.LabelPlanEstudioErp</label>
+                    <span id="lb-plan-estudio" class="label grid-75 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PeriodoEstudioIntegracionStrings.LabelPeriodoAcademicoErp</label>
+                    <span id="lb-periodo-academico" class="label grid-75 mobile-grid-100"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box-buttons">
+        <button id="btn-guardar" class="button">@CommonStrings.LabelGuardar</button>
+        <button id="btn-cancelar" class="button">@CommonStrings.LabelCancelar</button>
+    </div>
+</div>

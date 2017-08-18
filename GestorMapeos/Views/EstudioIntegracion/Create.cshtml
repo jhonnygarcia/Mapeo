@@ -1,0 +1,98 @@
+﻿@using GestorMapeos.CustomHelpers
+@using GestorMapeos.Globalization.Views
+
+@{
+    ViewBag.Title = EstudioIntegracionStrings.LabelTitleCrear;
+    ViewBag.TitlePage = EstudioIntegracionStrings.LabelTitleCrear;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section JavaScript{
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Globalization/Scripts/EstudioIntegracionStrings.js")"></script>
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Scripts/pages/EstudioIntegracion/Create.js")"></script>
+}
+    <div id="page-maear-estudio-crear">
+        <input type="hidden" id="hd-id-estudio" value="@ViewBag.Id" />
+        <div class="box-fieldset">
+            <span class="field-title">@EstudioIntegracionStrings.LabelDatosEstudioGestor</span>
+            <div class="grid-100 mobile-grid-100">
+                <ul class="box-form">
+                    <li>
+                        <label for="cbx-estudio" class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelEstudio @CommonStrings.RequiredSymbol</label>
+                        <select id="cbx-estudio" class="grid-40 mobile-grid-100"></select>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@CommonStrings.LabelId</label>
+                        <span id="lb-id-estudio" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelPlan</label>
+                        <span id="lb-plan" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelActivo</label>
+                        <span id="lb-activo" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelTipoEstudio</label>
+                        <span id="lb-tipo-estudio" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelRamaConocimiento</label>
+                        <span id="lb-rama" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelTituloRuct</label>
+                        <span id="lb-titulo-ruct" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-fieldset">
+            <span class="field-title">@EstudioIntegracionStrings.LabelDatosEstudioErp</span>
+            <div class="grid-100 mobile-grid-100">
+                <ul class="box-form">
+                    <li>
+                        <label for="cbx-plan-integracion" class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelPlanEstudio @CommonStrings.RequiredSymbol</label>
+                        <select id="cbx-plan-integracion" class="grid-40 mobile-grid-100"></select>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@CommonStrings.LabelId</label>
+                        <span id="lb-id-plan-de-estudio" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelAnyo</label>
+                        <span id="lb-anyo" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelPlanOficial</label>
+                        <span id="lb-plan-oficial" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelEstudio</label>
+                        <span id="lb-estudio" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelTipoEstudio</label>
+                        <span id="lb-tipo-de-estudio-plan" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelRamaConocimiento</label>
+                        <span id="lb-rama-de-conocimiento-plan" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelTitulo</label>
+                        <span id="lb-titulo" class="label grid-75 mobile-grid-100"></span>
+                    </li>
+                    <li>
+                        <label for="cbx-especializacion" class="grid-15 mobile-grid-100">@EstudioIntegracionStrings.LabelEspecializacion</label>
+                        <select id="cbx-especializacion" class="grid-40 mobile-grid-100"></select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-buttons">
+            <button id="btn-guardar" class="button">@CommonStrings.LabelGuardarSalir</button>
+            <button id="btn-guardar-continuar" class="button">@CommonStrings.LabelGuardarContinuar</button>
+            <button id="btn-cancelar" class="button">@CommonStrings.LabelCancelar</button>
+        </div>
+    </div>

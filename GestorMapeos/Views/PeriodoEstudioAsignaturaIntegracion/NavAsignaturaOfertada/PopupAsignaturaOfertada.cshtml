@@ -1,0 +1,48 @@
+﻿@using GestorMapeos.Globalization.Views;
+@{
+    Layout = null;
+}
+<div id="popup-asignatura-ofertada-listar" class="grid-container">
+    <div class="box-fieldset">
+        <span class="field-title">@CommonStrings.LabelFiltros</span>
+        <div id="box-filters" class="clearfix">
+            <div class="grid-100 mobile-grid-100">
+                <ul class="box-form">
+                    <li>
+                        <label for="txt-id-asignatura-ofertada" class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelIdAsignaturaOfertadaErp</label>
+                        <input id="txt-id-asignatura-ofertada" class="grid-15 mobile-grid-100" type="text" />
+                    </li>
+                    <li>
+                        <div class="grid-100 mobile-grid-100">
+                            <div class="box-fieldset-agrupador">
+                                <ul class="box-form">
+                                    <li>
+                                        <label for="cbx-periodo-academico" class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelPeriodoAcademicoErp</label>
+                                        <select id="cbx-periodo-academico" class="grid-70 mobile-grid-100"></select>
+                                    </li>
+                                    <li>
+                                        <label for="cbx-plan-estudio" class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelPlanEstudio</label>
+                                        <select id="cbx-plan-estudio" class="grid-70 mobile-grid-100"></select>
+                                    </li>
+                                    <li>
+                                        <label for="cbx-asignatura-ofertada" class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelAsignaturaOfertadaErp</label>
+                                        <select id="cbx-asignatura-ofertada" class="grid-70 mobile-grid-100"></select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="align-right">
+            <button class="button" id="btn-buscar">@CommonStrings.LabelBuscar</button>
+            <button class="button" id="btn-limpiar">@CommonStrings.LabelLimpiar</button>
+        </div>
+    </div>
+    <div class="box-fieldset">
+        <span class="field-title">@CommonStrings.LabelResultados</span>
+        <table id="tb-asignatura-ofertada" class="display"></table>
+    </div>
+</div>

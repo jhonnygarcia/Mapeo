@@ -1,0 +1,70 @@
+﻿/****************Contenedor agrupador******************************/
+.box-fieldset-agrupador:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+*:first-child + html .box-fieldset-agrupador {
+    height: 1%;
+}
+
+* html .box-fieldset-agrupador {
+    height: 1%;
+    display: inline-block;
+}
+
+.box-fieldset-agrupador {
+    display: block;
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid #8b8b8b;
+    margin-bottom: 8px;
+    zoom: 1;
+    position: relative;
+}
+
+.box-fieldset-agrupador .titulo-agrupador {
+    background-color: #eee;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    color: #003658;
+    font: bold 13px/16px Arial, Helvetica, sans-serif;
+}
+
+.box-fieldset-agrupador .titulo-agrupador-blanco {
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    color: #003658;
+    font: bold 13px/16px Arial, Helvetica, sans-serif;
+}
+
+/* Leyendas */
+table.dataTable tbody td.color-erp {
+     background-color: #fff0b3 !important; 
+}
+
+table.dataTable tbody td.color-gestor {
+  background-color: #f9f9f9 !important;   
+}
+
+.gestor-unir {
+    background-color: #f9f9f9;
+    border: 1px solid #000;
+    border-radius: 7px;
+    height: 14px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+.erp-academico {
+    background-color: #fff0b3;
+    border: 1px solid #000;
+    border-radius: 7px;
+    height: 14px;
+    width: 100px
+}

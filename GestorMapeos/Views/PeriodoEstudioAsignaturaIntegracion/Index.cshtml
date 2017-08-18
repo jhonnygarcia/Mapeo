@@ -1,0 +1,95 @@
+﻿@using GestorMapeos.CustomHelpers;
+@using GestorMapeos.Globalization.Views
+@{
+    ViewBag.Title = PeriodoEstudioAsignaturaIntegracionStrings.TitleListar;
+    ViewBag.TitlePage = PeriodoEstudioAsignaturaIntegracionStrings.TitleListar;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section JavaScript{
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Globalization/Scripts/PeriodoEstudioAsignaturaIntegracionStrings.js")"></script>
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Scripts/pages/PeriodoEstudioAsignaturaIntegracion/List.js")"></script>
+}
+<div id="page-periodo-matriculacion-listar">
+    <div class="box-fieldset">
+        <span class="field-title">@CommonStrings.LabelFiltros</span>
+        <div id="box-filters" class="clearfix">
+            <div class="box-fieldset">
+                <span class="field-title">@CommonStrings.LabelLeyendaGestorUnir2</span>
+                <div class="grid-100 mobile-grid-100">
+                    <ul class="box-form">
+                        <li>
+                            <label for="txt-id-periodo-matriculacion" class="grid-15 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelIdPeriodoEstudioAsignacion</label>
+                            <input id="txt-id-periodo-matriculacion" class="grid-15 mobile-grid-100" type="text" />
+                        </li>
+                        <li>
+                            <div class="grid-100 mobile-grid-100">
+                                <div class="box-fieldset-agrupador">
+                                    <ul class="box-form">
+                                        <li>
+                                            <label for="cbx-periodo-matriculacion" class="grid-15 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelPeriodoMatriculacion</label>
+                                            <select id="cbx-periodo-matriculacion" class="grid-40 mobile-grid-100"></select>
+                                        </li>
+                                        <li>
+                                            <label for="cbx-estudio" class="grid-15 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelEstudio</label>
+                                            <select id="cbx-estudio" class="grid-40 mobile-grid-100"></select>
+                                        </li>
+                                        <li>
+                                            <label for="cbx-asignatura" class="grid-15 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelAsignatura</label>
+                                            <select id="cbx-asignatura" class="grid-40 mobile-grid-100"></select>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box-fieldset">
+                <span class="field-title">@CommonStrings.LabelLeyendaERPAcademico2</span>
+                <div class="grid-100 mobile-grid-100">
+                    <ul class="box-form">
+                        <li>
+                            <label for="txt-id-asignatura-ofertada" class="grid-15 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelIdAsignaturaOfertadaErp</label>
+                            <input id="txt-id-asignatura-ofertada" class="grid-15 mobile-grid-100" type="text" />
+                        </li>
+                        <li>
+                            <div class="grid-100 mobile-grid-100">
+                                <div class="box-fieldset-agrupador">
+                                    <ul class="box-form">
+                                        <li>
+                                            <label for="cbx-periodo-academico" class="grid-15 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelPeriodoAcademico</label>
+                                            <select id="cbx-periodo-academico" class="grid-40 mobile-grid-100"></select>
+                                        </li>
+                                        <li>
+                                            <label for="cbx-plan-estudio" class="grid-15 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelPlanEstudio</label>
+                                            <select id="cbx-plan-estudio" class="grid-40 mobile-grid-100"></select>
+                                        </li>
+                                        <li>
+                                            <label for="cbx-asignatura-ofertada" class="grid-15 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelAsignaturaOfertadaErp</label>
+                                            <select id="cbx-asignatura-ofertada" class="grid-40 mobile-grid-100"></select>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="align-right">
+            <button class="button" id="btn-buscar">@CommonStrings.LabelBuscar</button>
+            <button class="button" id="btn-limpiar">@CommonStrings.LabelLimpiar</button>
+        </div>
+    </div>
+    <div class="box-fieldset">
+        <span class="field-title">@CommonStrings.LabelResultados</span>
+        <div class="box-buttons">
+            <button class="button" id="btn-crear">@CommonStrings.LabelCrear</button>
+            <button class="button" id="btn-eliminar">@CommonStrings.LabelEliminar</button>
+        </div>
+        <table id="tb-asignatura-ofertada-integracion" class="display"></table>
+    </div>
+    @Html.Partial("_LeyendaConGestor")
+</div>
+

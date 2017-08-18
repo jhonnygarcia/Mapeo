@@ -1,0 +1,82 @@
+﻿@using GestorMapeos.CustomHelpers;
+@using GestorMapeos.Globalization.Views
+@{
+    ViewBag.Title = PlantillaAsignaturaIntegracionStrings.LabelTituloPaginaAdicion;
+    ViewBag.TitlePage = PlantillaAsignaturaIntegracionStrings.LabelTituloPaginaAdicion;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section JavaScript{
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Globalization/Scripts/PlantillaAsignaturaIntegracionStrings.js")"></script>
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Scripts/pages/PlantillaAsignaturaIntegracion/Create.js")"></script>
+}
+<div id="page-asignatura-plan-crear">
+    <div class="box-fieldset">
+        <span class="field-title">@PlantillaAsignaturaIntegracionStrings.LabelSeccionPlantillaAsignatura</span>
+        <div class="grid-100 mobile-grid-100">
+            <ul class="box-form">
+                <li>
+                    <label for="cbx-plantilla-estudio" class="grid-15 mobile-grid-100">@PlantillaAsignaturaIntegracionStrings.LabelPlantillaEstudio</label>
+                    <select id="cbx-plantilla-estudio" class="grid-40 mobile-grid-100"></select>
+                </li>
+                <li>
+                    <label for="cbx-plantilla-asignatura" class="grid-15 mobile-grid-100">@PlantillaAsignaturaIntegracionStrings.LabelPlantillaAsignatura @CommonStrings.RequiredSymbol</label>
+                    <select id="cbx-plantilla-asignatura" class="grid-40 mobile-grid-100"></select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label id="lb-codigo-plantilla-asignatura" class="italic"></label>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@CommonStrings.LabelId</label>
+                    <span id="lb-id-plantilla-asignatura" class="label grid-75 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PlantillaAsignaturaIntegracionStrings.LabelPlantillaEstudio</label>
+                    <span id="lb-plantilla-estudio" class="label grid-75 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PlantillaAsignaturaIntegracionStrings.LabelTipoAsignatura</label>
+                    <span id="lb-tipo-asignatura" class="label grid-75 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PlantillaAsignaturaIntegracionStrings.LabelCreditos</label>
+                    <span id="lb-creditos" class="label grid-75 mobile-grid-100"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box-fieldset">
+        <span class="field-title">@PlantillaAsignaturaIntegracionStrings.LabelSeccionAsignaturaPlan</span>
+        <div class="grid-100 mobile-grid-100">
+            <ul class="box-form">
+                <li>
+                    <label for="cbx-plan-estudio-erp" class="grid-15 mobile-grid-100">@PlantillaAsignaturaIntegracionStrings.LabelPlanEstudioErp</label>
+                    <select id="cbx-plan-estudio-erp" class="grid-40 mobile-grid-100"></select>
+                </li>
+                <li>
+                    <label for="cbx-asignatura-plan-erp" class="grid-15 mobile-grid-100">@PlantillaAsignaturaIntegracionStrings.LabelAsignaturaPlanErp @CommonStrings.RequiredSymbol</label>
+                    <select id="cbx-asignatura-plan-erp" class="grid-40 mobile-grid-100"></select>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@CommonStrings.LabelId</label>
+                    <span id="lb-id-asignatura-plan-erp" class="label grid-75 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PlantillaAsignaturaIntegracionStrings.LabelPlanEstudioErp</label>
+                    <span id="lb-plan-estudio-erp" class="label grid-75 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PlantillaAsignaturaIntegracionStrings.LabelTipoAsignaturaErp</label>
+                    <span id="lb-tipo-asignatura-erp" class="label grid-75 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-15 mobile-grid-100">@PlantillaAsignaturaIntegracionStrings.LabelCreditosErp</label>
+                    <span id="lb-creditos-erp" class="label grid-75 mobile-grid-100"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box-buttons">
+        <button id="btn-guardar" class="button">@CommonStrings.LabelGuardarSalir</button>
+        <button id="btn-guardar-continuar" class="button">@CommonStrings.LabelGuardarContinuar</button>
+        <button id="btn-cancelar" class="button">@CommonStrings.LabelCancelar</button>
+    </div>
+</div>

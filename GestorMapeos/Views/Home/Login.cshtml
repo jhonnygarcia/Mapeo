@@ -1,0 +1,85 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestor de Mapeos</title>
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        #loginform {
+            width: 500px;
+            height: 330px;
+            margin-top: 100px;
+            background-color: #595959;
+            border-radius: 3px;
+            box-shadow: 0px 0px 10px 0px #424242;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: helvetica;
+            visibility: hidden;
+            display: none;
+            position: relative;
+        }
+
+            #loginform #close_login {
+                position: absolute;
+                top: 10px;
+                left: 465px;
+                width: 15px;
+                height: 15px;
+            }
+
+            #loginform p {
+                margin-top: 40px;
+                font-size: 22px;
+                color: #E6E6E6;
+            }
+
+            #loginform #login {
+                width: 250px;
+                height: 40px;
+                border: 2px solid silver;
+                border-radius: 3px;
+                padding: 5px;
+            }
+
+            #loginform #password {
+                margin-top: 5px;
+                width: 250px;
+                height: 40px;
+                border: 2px solid silver;
+                border-radius: 3px;
+                padding: 5px;
+            }
+
+            #loginform #dologin {
+                margin-left: -5px;
+                margin-top: 10px;
+                width: 250px;
+                height: 40px;
+                border: none;
+                border-radius: 3px;
+                color: #E6E6E6;
+                background-color: grey;
+                font-size: 20px;
+            }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="loginform" style="display: block; visibility: visible;">
+            <form name="login" action="@Url.Content("~/Home/Login")" method="post" accept-charset="utf8">
+                <p>Ingrese su usuario y contraseña: </p>
+                <input type="text" id="login" name="username" value="" placeholder="Nombre de Usuario"/>
+                <input type="password" id="password" name="password" value="" placeholder="Contraseña" />
+                <input type="submit" id="dologin" value="Login">
+            </form>
+        </div>
+    </center>
+</body>
+</html>

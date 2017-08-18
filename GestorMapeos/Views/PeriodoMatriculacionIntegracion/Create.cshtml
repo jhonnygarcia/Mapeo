@@ -1,0 +1,81 @@
+﻿@using GestorMapeos.CustomHelpers;
+@using GestorMapeos.Globalization.Views
+@{
+    ViewBag.Title = PeriodoMatriculacionIntegracionStrings.TitleCrear;
+    ViewBag.TitlePage = PeriodoMatriculacionIntegracionStrings.TitleCrear;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section JavaScript{
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Globalization/Scripts/PeriodoMatriculacionIntegracionStrings.js")"></script>
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Scripts/pages/PeriodoMatriculacionIntegracion/Create.js")"></script>
+}
+<div id="page-periodo-matriculacion-crear">
+    <input type="hidden" id="hd-id-plan" value="@ViewBag.Id" />
+    <div class="box-fieldset">
+        <span class="field-title">@PeriodoMatriculacionIntegracionStrings.GrupoPeriodoMatriculacion</span>
+        <div class="grid-100 mobile-grid-100">
+            <ul class="box-form">
+                <li>
+                    <label for="cbx-periodo-matriculacion" class="grid-20 mobile-grid-100">@PeriodoMatriculacionIntegracionStrings.LabelPeriodoMatriculacion @CommonStrings.RequiredSymbol</label>
+                    <select id="cbx-periodo-matriculacion" class="grid-40 mobile-grid-100"></select>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@CommonStrings.LabelId</label>
+                    <span id="lb-id-periodo-matriculacion" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoMatriculacionIntegracionStrings.LabelAñoAcademico</label>
+                    <span id="lb-anyo-matriculacion" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoMatriculacionIntegracionStrings.LabelFechaInicio</label>
+                    <span id="lb-fecha-inicio-matriculacion" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoMatriculacionIntegracionStrings.LabelFechaFin</label>
+                    <span id="lb-fecha-fin-matriculacion" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoMatriculacionIntegracionStrings.LabelNro</label>
+                    <span id="lb-nro-matriculacion" class="label grid-70 mobile-grid-100"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box-fieldset">
+        <span class="field-title">@PeriodoMatriculacionIntegracionStrings.GrupoPeriodoAcademico</span>
+        <div class="grid-100 mobile-grid-100">
+            <ul class="box-form">
+                <li>
+                    <label for="cbx-periodo-matriculacion" class="grid-20 mobile-grid-100">@PeriodoMatriculacionIntegracionStrings.LabelPeriodoAcademico @CommonStrings.RequiredSymbol</label>
+                    <select id="cbx-periodo-academico" class="grid-40 mobile-grid-100"></select>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@CommonStrings.LabelId</label>
+                    <span id="lb-id-periodo-academico" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoMatriculacionIntegracionStrings.LabelAñoAcademico</label>
+                    <span id="lb-anyo-academico" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoMatriculacionIntegracionStrings.LabelFechaInicio</label>
+                    <span id="lb-fecha-inicio-academico" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoMatriculacionIntegracionStrings.LabelFechaFin</label>
+                    <span id="lb-fecha-fin-academico" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoMatriculacionIntegracionStrings.LabelNro</label>
+                    <span id="lb-nro-academico" class="label grid-70 mobile-grid-100"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box-buttons">
+        <button id="btn-guardar" class="button">@CommonStrings.LabelGuardarSalir</button>
+        <button id="btn-guardar-continuar" class="button">@CommonStrings.LabelGuardarContinuar</button>
+        <button id="btn-cancelar" class="button">@CommonStrings.LabelCancelar</button>
+    </div>
+</div>

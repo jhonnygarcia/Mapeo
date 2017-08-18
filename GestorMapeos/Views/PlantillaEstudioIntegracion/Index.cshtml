@@ -1,0 +1,61 @@
+﻿@using GestorMapeos.CustomHelpers;
+@using GestorMapeos.Globalization.Views
+@{
+    ViewBag.Title = PlantillaEstudioIntegracionStrings.LabelTitleListar;
+    ViewBag.TitlePage = PlantillaEstudioIntegracionStrings.LabelTitleListar;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section JavaScript{
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Globalization/Scripts/PlantillaEstudioIntegracionStrings.js")"></script>
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Scripts/pages/PlantillaEstudioIntegracion/List.js")"></script>
+}
+<div id="page-asignatura-plan-listar">
+    <div class="box-fieldset">
+        <span class="field-title">@CommonStrings.LabelFiltros</span>
+        <div id="box-filters" class="clearfix">
+            <div class="box-fieldset">
+                <span class="field-title">@CommonStrings.LabelLeyendaGestionExpedientes</span>
+                <div class="grid-100 mobile-grid-100">
+                    <ul class="box-form">
+                        <li>
+                            <label for="txt-id-plantilla-estudio" class="grid-15 mobile-grid-100">@PlantillaEstudioIntegracionStrings.LabelIdPlantillaEstudio</label>
+                            <input id="txt-id-plantilla-estudio" class="grid-15 mobile-grid-100" type="text"/>
+                        </li>
+                        <li>
+                            <label for="cbx-plantilla-estudio" class="grid-15 mobile-grid-100">@PlantillaEstudioIntegracionStrings.LabelPlantillaEstudio</label>
+                            <select id="cbx-plantilla-estudio" class="grid-40 mobile-grid-100"></select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box-fieldset">
+                <span class="field-title">@CommonStrings.LabelLeyendaERPAcademico2</span>
+                <div class="grid-100 mobile-grid-100">
+                    <ul class="box-form">
+                        <li>
+                            <label for="txt-id-plan" class="grid-15 mobile-grid-100">@PlantillaEstudioIntegracionStrings.LabelIdPlan</label>
+                            <input id="txt-id-plan" class="grid-15 mobile-grid-100" type="text" />
+                        </li>
+                        <li>
+                            <label for="cbx-plan" class="grid-15 mobile-grid-100">@PlantillaEstudioIntegracionStrings.LabelPlan</label>
+                            <select id="cbx-plan" class="grid-40 mobile-grid-100"></select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="align-right">
+            <button class="button" id="btn-buscar">Buscar</button>
+            <button class="button" id="btn-limpiar">Limpiar</button>
+        </div>
+    </div>
+    <div class="box-fieldset">
+        <span class="field-title">@CommonStrings.LabelResultados</span>
+        <div class="box-buttons">
+            <button class="button" id="btn-crear">@CommonStrings.LabelCrear</button>
+            <button class="button" id="btn-eliminar">@CommonStrings.LabelEliminar</button>
+        </div>
+        <table id="tb-plan-integracion" class="display"></table>
+    </div>
+    @Html.Partial("_LeyendaConExpedientes")
+</div>

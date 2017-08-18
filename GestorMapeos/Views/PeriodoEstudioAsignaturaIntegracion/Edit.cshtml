@@ -1,0 +1,125 @@
+﻿@using GestorMapeos.CustomHelpers;
+@using GestorMapeos.Globalization.Views
+@{
+    ViewBag.Title = PeriodoEstudioAsignaturaIntegracionStrings.LabelTituloPaginaEdicion;
+    ViewBag.TitlePage = PeriodoEstudioAsignaturaIntegracionStrings.LabelTituloPaginaEdicion;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section JavaScript{
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Globalization/Scripts/PeriodoEstudioAsignaturaIntegracionStrings.js")"></script>
+    <script type="text/javascript" src="@Url.ContentNoCache("~/Scripts/pages/PeriodoEstudioAsignaturaIntegracion/Edit.js")"></script>
+}
+<div id="page-asignatura-estudio-editar">
+    <input type="hidden" id="hd-id-periodo-estudio-asignatura" value="@ViewBag.Id"/>
+    <input type="hidden" id="hd-id-asignatura-ofertada" />
+    <div class="box-fieldset">
+        <span class="field-title">@PeriodoEstudioAsignaturaIntegracionStrings.LabelSeccionPeriodoAsignatura</span>
+        <div class="grid-100 mobile-grid-100">
+            <ul class="box-form">
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelIdPeriodoEstudioAsignatura</label>
+                    <span id="lb-id-periodo-estudio-asignatura" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelAsignatura</label>
+                    <span id="lb-asignatura" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelTipoAsignatura</label>
+                    <span id="lb-tipo-asignatura" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelCreditos</label>
+                    <span id="lb-creditos" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelPeriodoLectivo</label>
+                    <span id="lb-periodo-lectivo" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelCurso</label>
+                    <span id="lb-curso" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelActiva</label>
+                    <span id="lb-activa" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelIdPeriodoEstudio</label>
+                    <span id="lb-id-periodo-estudio" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelEstudio</label>
+                    <span id="lb-estudio" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelPeriodoMatriculacion</label>
+                    <span id="lb-periodo-matriculacion" class="label grid-70 mobile-grid-100"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box-fieldset">
+        <span class="field-title">@PeriodoEstudioAsignaturaIntegracionStrings.LabelSeccionAsignaturaOfertada</span>
+        <div class="grid-100 mobile-grid-100">
+            <ul class="box-form">
+                <li>
+                    <button id="btn-buscar-asignatura-ofertada" class="button">@PeriodoEstudioAsignaturaIntegracionStrings.BotonBuscarAsignaturaOfertada</button>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelIdAsignaturaOfertadaErp</label>
+                    <span id="lb-id-asignatura-ofertada-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelAsignaturaOfertadaErp</label>
+                    <span id="lb-asignatura-ofertada-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelAsignaturaPlanErp</label>
+                    <span id="lb-asignatura-plan-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelPeriodoLectivoErp</label>
+                    <span id="lb-periodo-lectivo-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelTipoAsignaturaErp</label>
+                    <span id="lb-tipo-asignatura-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelCreditosErp</label>
+                    <span id="lb-creditos-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelDuracionPeriodoLectivoErp</label>
+                    <span id="lb-duracion-periodo-lectivo-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelUbicacionPeriodoLectivoErp</label>
+                    <span id="lb-ubicacion-periodo-lectivo-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelCursoErp</label>
+                    <span id="lb-curso-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelIdPlanOfertadoErp</label>
+                    <span id="lb-id-plan-ofertado-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelPlanEstudioErp</label>
+                    <span id="lb-plan-estudio-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+                <li>
+                    <label class="grid-20 mobile-grid-100">@PeriodoEstudioAsignaturaIntegracionStrings.LabelPeriodoAcademicoErp</label>
+                    <span id="lb-periodo-academico-erp" class="label grid-70 mobile-grid-100"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box-buttons">
+        <button id="btn-guardar" class="button">@CommonStrings.LabelGuardar</button>
+        <button id="btn-cancelar" class="button">@CommonStrings.LabelCancelar</button>
+    </div>
+</div>

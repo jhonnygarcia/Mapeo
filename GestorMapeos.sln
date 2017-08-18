@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorMapeos", "GestorMapeos\GestorMapeos.csproj", "{3A98BD34-487B-4132-87DC-BC3F0E2EF724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorMapeos.Test", "GestorMapeos.Test\GestorMapeos.Test.csproj", "{3EEF8865-C786-4DC0-AA99-0F0699FBD45C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DES|Any CPU = DES|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A98BD34-487B-4132-87DC-BC3F0E2EF724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A98BD34-487B-4132-87DC-BC3F0E2EF724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A98BD34-487B-4132-87DC-BC3F0E2EF724}.DES|Any CPU.ActiveCfg = DES|Any CPU
+		{3A98BD34-487B-4132-87DC-BC3F0E2EF724}.DES|Any CPU.Build.0 = DES|Any CPU
+		{3A98BD34-487B-4132-87DC-BC3F0E2EF724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A98BD34-487B-4132-87DC-BC3F0E2EF724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EEF8865-C786-4DC0-AA99-0F0699FBD45C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EEF8865-C786-4DC0-AA99-0F0699FBD45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EEF8865-C786-4DC0-AA99-0F0699FBD45C}.DES|Any CPU.ActiveCfg = DES|Any CPU
+		{3EEF8865-C786-4DC0-AA99-0F0699FBD45C}.DES|Any CPU.Build.0 = DES|Any CPU
+		{3EEF8865-C786-4DC0-AA99-0F0699FBD45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EEF8865-C786-4DC0-AA99-0F0699FBD45C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
